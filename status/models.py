@@ -24,3 +24,8 @@ class Status(models.Model):
 
     def __str__(self) -> str:
         return str(self.content)[:50]
+
+    class Meta:
+        verbose_name = 'Status post'
+        verbose_name_plural = 'Status posts'
+        ordering = ['id']

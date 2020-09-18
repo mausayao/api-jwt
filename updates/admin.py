@@ -5,3 +5,4 @@ from .models import Update
 @admin.register(Update)
 class UpdateAdmin(admin.ModelAdmin):
     list_display = ('user', 'content',)
+

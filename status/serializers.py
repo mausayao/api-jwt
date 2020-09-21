@@ -10,7 +10,7 @@ class StatusSerializer(serializers.ModelSerializer):
         fields = (
             'user',
             'content',
-            'image'
+            'image',
         )
 
     # def validate_content(sef, value):

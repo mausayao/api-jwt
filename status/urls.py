@@ -1,13 +1,10 @@
 from os import name
 from django.urls import path
 
-from .views import StatusAPIView
+from .views import StatusAPIView, StatusAPIDetailView
 
 
 urlpatterns = [
     path('status/', StatusAPIView.as_view(), name='list'),
-    path('status/', StatusCreateAPIView.as_view(), name='create'),
-    path('status/<id>/', StatusDetailAPIView.as_view(), name='detail'),
-    path('status/<id>/', StatusUpdateAPIView.as_view(), name='update'),
-    path('status/<id>/', StatusDeleteAPIView.as_view(), name='delete')
+    path('status/<id>/', StatusAPIDetailView.as_view(), name='detail'),
 ]
